@@ -17,7 +17,7 @@ function AboutCard() {
             <br />
             
             <br/>
-            I love turning complex problems into elegant solutions.
+            I love turning complex problems into elegant solutions and that is exactly why i love Data Structures and Algorithms.
             <br />
             Currently Exploring:
           </p>
@@ -26,10 +26,10 @@ function AboutCard() {
               <ImPointRight /> Cloud Computing
             </li>
             <li className="about-activity">
-              <ImPointRight /> Computer Vision
+              <ImPointRight /> Artificial Intelligence
             </li>
             <li className="about-activity">
-              <ImPointRight /> Game Theory
+              <ImPointRight /> Autonomous Systems
             </li>
           </ul>
 
