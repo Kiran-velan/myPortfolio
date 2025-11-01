@@ -22,10 +22,10 @@ function Projects() {
             <ProjectCard
               imgPath={swarm}
               isBlog={false}
-              title="ASI based Decision Making platform"
-              description="I created a platform where a group of people can come together online to make decisions collectively. Everyone uses sliders to share their opinions, and the system processes those inputs using a smart algorithm to find the most agreed-upon option. It shows this agreement as a puck moving inside a circle in real time. The platform also has chat, timed questions, and generates a report at the end — all aimed at simulating swarm-like decision-making, like how bees or birds decide together."
-              ghLink="https://github.com/Kiran-velan/Artificial-Swarm-Intelligence-Platform"
-              // demoLink="https://chatify-49.web.app/"
+              title="ConsensusWorks"
+              description="I created a platform where a group of people can come together online to make decisions collectively. Everyone uses sliders to share their opinions, and the system processes those inputs using a smart algorithm to find the most agreed-upon option. It shows this agreement as a strengths moving inside a circle in real time. The platform also has chat, timed questions, and generates a report at the end — all aimed at simulating swarm-like decision-making, like how bees or birds decide together."
+              ghLink="https://github.com/Kiran-velan/ConsensusWorks-Collective_Decision_Making_Platform"
+              demoLink="https://consensusworks-production.up.railway.app/"
             />
           </Col>
 
