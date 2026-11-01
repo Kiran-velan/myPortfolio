@@ -23,20 +23,23 @@ import {
   SiThymeleaf,
   SiPostgresql,
   SiAppwrite,
-  SiOllama,
   SiOpenai,
-  SiLangchain,
   SiGithub,
   SiPostman,
   SiVisualstudiocode,
   SiIntellijidea,
 } from "react-icons/si";
 
-import { FaBrain } from "react-icons/fa";
+import {
+  FaBrain,
+  FaRobot,
+  FaLink,
+} from "react-icons/fa";
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+
       {/* Programming Languages */}
       <Col xs={4} md={2} className="tech-icons"><DiPython /></Col>
       <Col xs={4} md={2} className="tech-icons"><DiJava /></Col>
@@ -56,8 +59,8 @@ function Techstack() {
       {/* AI & LLM */}
       <Col xs={4} md={2} className="tech-icons"><SiOpenai /></Col>
       <Col xs={4} md={2} className="tech-icons"><FaBrain /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiOllama /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiLangchain /></Col>
+      <Col xs={4} md={2} className="tech-icons"><FaRobot /></Col>
+      <Col xs={4} md={2} className="tech-icons"><FaLink /></Col>
 
       {/* Databases & Storage */}
       <Col xs={4} md={2} className="tech-icons"><DiMysql /></Col>
@@ -75,6 +78,7 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons"><SiPostman /></Col>
       <Col xs={4} md={2} className="tech-icons"><SiVisualstudiocode /></Col>
       <Col xs={4} md={2} className="tech-icons"><SiIntellijidea /></Col>
+
     </Row>
   );
 }
