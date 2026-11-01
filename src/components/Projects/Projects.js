@@ -6,7 +6,6 @@ import api_rate from "../../Assets/Projects/api_rate.png";
 import swarm from "../../Assets/Projects/swarm.png";
 import smartscribe from "../../Assets/Projects/smartscribe.png";
 import finwise from "../../Assets/Projects/finwise.png";
-import cli_agent from "../../Assets/Projects/cli_agent.png";
 
 import "./Projects.css";
 
@@ -21,7 +20,7 @@ const projects = [
     engineering:
       "Implemented timed rounds, real-time updates, collaborative chat and report generation. Spring Boot handles the backend, WebSockets enable live communication, Redis supports application operations, and a Python service handles decision intelligence.",
     technologies:
-      "Java 21, Spring Boot, Python, WebSockets, Redis, MySQL",
+      "Java 21 · Spring Boot · Python · WebSockets · Redis · MySQL",
     github:
       "https://github.com/Kiran-velan/ConsensusWorks-Collective_Decision_Making_Platform",
     demo:
@@ -47,7 +46,7 @@ const projects = [
     engineering:
       "Developed a media processing pipeline covering transcription, embedding generation, retrieval and context-aware answer generation using Whisper, Hugging Face, RAG and local LLMs. FastAPI handles backend services, with React and Appwrite supporting the application.",
     technologies:
-      "Python, FastAPI, Whisper, Hugging Face, RAG, Ollama, React, Appwrite",
+      "Python · FastAPI · Whisper · Hugging Face · RAG · Ollama · React · Appwrite",
     github: "https://github.com/Kiran-velan/SmartScribe",
     evidence: [
       {
@@ -66,7 +65,7 @@ const projects = [
     engineering:
       "Implemented Fixed Window and Token Bucket algorithms, Redis-backed request tracking, configurable user plans and a live analytics dashboard using Java and Spring Boot.",
     technologies:
-      "Java, Spring Boot, Redis, Fixed Window, Token Bucket",
+      "Java · Spring Boot · Redis · Fixed Window · Token Bucket",
     github: "https://github.com/Kiran-velan/API-Rate-Limiter",
     evidence: [
       {
@@ -85,7 +84,7 @@ const projects = [
     engineering:
       "Integrated Yahoo Finance and Google News RSS for market information, calculated RSI, MACD and SMA-20 indicators, and incorporated AI-generated analysis using Groq, FastAPI and n8n workflows.",
     technologies:
-      "Python, FastAPI, Groq, Yahoo Finance, Technical Indicators, n8n",
+      "Python · FastAPI · Groq · Yahoo Finance · Technical Indicators · n8n",
     github: "https://github.com/Kiran-velan/Finwise",
     evidence: [
       {
@@ -96,7 +95,7 @@ const projects = [
   },
   {
     title: "CLI Coding Support Agent",
-    image: cli_agent,
+    cover: true,
     problem:
       "Developers frequently need to inspect, create and modify multiple project files while working in the terminal. Repeating these operations manually interrupts the development workflow.",
     solution:
@@ -104,7 +103,7 @@ const projects = [
     engineering:
       "Implemented file reading, creation, editing and writing through an iterative tool-calling workflow using Python, LiteLLM and Gemini. Shell commands require explicit user approval.",
     technologies:
-      "Python, LiteLLM, Gemini, Tool Calling, Filesystem Operations, CLI",
+      "Python · LiteLLM · Gemini · Tool Calling · Filesystem Operations · CLI",
     github:
       "https://github.com/Kiran-velan/my-cli-coding-support-agent",
     evidence: [
@@ -118,10 +117,7 @@ const projects = [
 
 function ProjectLinks({ project }) {
   const links = [
-    {
-      label: "GitHub",
-      url: project.github,
-    },
+    { label: "GitHub", url: project.github },
     ...(project.demo
       ? [{ label: "Live Demo", url: project.demo }]
       : []),
@@ -153,11 +149,38 @@ function ProjectCard({ project }) {
   return (
     <article className="work-card">
       <div className="work-card-image">
-        <img
-          src={project.image}
-          alt={`${project.title} application screenshot`}
-          loading="lazy"
-        />
+        {project.cover ? (
+          <div className="work-cover">
+            <div className="work-cover-window">
+              <div className="work-cover-bar">
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="work-cover-code">
+                <span className="cover-code-muted">$</span> ai-agent
+                <br />
+                <span className="cover-code-accent">›</span> inspect project
+                <br />
+                <span className="cover-code-muted">✓</span> files loaded
+                <br />
+                <span className="cover-code-accent">›</span> ready to assist
+                <span className="cover-cursor">_</span>
+              </div>
+            </div>
+
+            <div className="work-cover-caption">
+              <span>BUILT FOR THE TERMINAL</span>
+              <strong>AI Coding Agent</strong>
+            </div>
+          </div>
+        ) : (
+          <img
+            src={project.image}
+            alt={`${project.title} application screenshot`}
+            loading="lazy"
+          />
+        )}
       </div>
 
       <div className="work-card-content">
