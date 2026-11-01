@@ -1,44 +1,32 @@
 <h2 align="center">
-  Portfolio Website<br/>
-  <a href="https://kiran-portfolio-omega.vercel.app/" target="_blank">kiran.tech</a>
+  Kiran S — Software Development Engineer
+  <br/>
+  <a href="https://kiran-portfolio-omega.vercel.app/" target="_blank">Portfolio</a>
 </h2>
+
+I build backend systems, cloud-native workflows, and applied AI applications. This repository contains my personal portfolio, selected engineering projects, technical background, and resume.
+
+## Focus Areas
+
+- **Backend engineering:** API design, Spring Boot, FastAPI, Redis, PostgreSQL, event-driven workflows
+- **Cloud & delivery:** AWS, Docker, GitHub Actions, CI/CD, deployment automation, observability
+- **Applied AI:** LLM applications, RAG, AI agents, semantic retrieval, MCP, Hugging Face, Ollama
+
+## Selected Projects
+
+- [ConsensusWorks](https://github.com/Kiran-velan/ConsensusWorks-Collective_Decision_Making_Platform) — Collaborative decision-making using Bradley–Terry ranking and adaptive questioning.
+- [SmartScribe](https://github.com/Kiran-velan/SmartScribe) — Audio/video transcription, semantic retrieval, and context-aware Q&A.
+- [API Rate Limiter](https://github.com/Kiran-velan/API-Rate-Limiter) — Redis-backed API gateway with configurable rate-limiting strategies.
+- [FinWise](https://github.com/Kiran-velan/FinWise) — Financial research APIs with market data, technical indicators, and AI-assisted analysis.
 
 ## Built With
 
-My personal portfolio <a href="https://kiran-portfolio-omega.vercel.app/" target="_blank">kiran.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+React, React Bootstrap, React Router, and CSS.
 
-This project was built using these technologies.
+## Run Locally
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
+1. Install dependencies: `npm install`
+2. Start the development server: `npm start`
+3. Open [http://localhost:3000](http://localhost:3000).
 
-## Features
-
-**📖 Multi-Page Layout**
-
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
-
-**📱 Fully Responsive**
-
-## Getting Started
-
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
-
-## 🛠 Installation and Setup Instructions
-
-1. Installation: `npm install`
-
-2. In the project directory, you can run: `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
-
-## Usage Instructions
-
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+The portfolio is deployed at [kiran-portfolio-omega.vercel.app](https://kiran-portfolio-omega.vercel.app/).

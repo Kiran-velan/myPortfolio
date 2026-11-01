@@ -12,10 +12,11 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          Selected <strong className="purple">Projects</strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          A selection of systems I've built across backend engineering,
+          distributed applications, and applied AI.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
@@ -23,7 +24,7 @@ function Projects() {
               imgPath={swarm}
               isBlog={false}
               title="ConsensusWorks"
-              description="I created a platform where a group of people can come together online to make decisions collectively. Everyone uses sliders to share their opinions, and the system processes those inputs using a smart algorithm to find the most agreed-upon option. It shows this agreement as a strengths moving inside a circle in real time. The platform also has chat, timed questions, and generates a report at the end — all aimed at simulating swarm-like decision-making, like how bees or birds decide together."
+              description="Designed a collaborative decision platform that turns group preferences into a ranked consensus using the Bradley–Terry model and adaptive multi-round questions. Supports 20 options per question; pilot testing showed a 25% improvement in consensus scores over individual pre-session preferences. Built modular Spring Boot and FastAPI services with Redis caching and WebSocket updates."
               ghLink="https://github.com/Kiran-velan/ConsensusWorks-Collective_Decision_Making_Platform"
               demoLink="https://consensusworks-production.up.railway.app/"
             />
@@ -34,9 +35,8 @@ function Projects() {
               imgPath={smartscribe}
               isBlog={false}
               title="SmartScribe"
-              description="SmartScribe is an AI-powered web app that lets users upload or link videos, transcribes them using Whisper, and enables interactive Q&A through a chat interface using local LLMs like Mistral. It’s like ChatGPT, but for understanding and learning from videos. I built it using FastAPI for the backend, React for the frontend, and Appwrite for auth and database. It supports YouTube links, audio/video uploads, and uses a RAG pipeline with Hugging Face embeddings to generate context-aware answers."
+              description="Addressed the difficulty of finding precise information in long recordings by building a searchable audio/video knowledge system. Combined Whisper transcription, Hugging Face semantic retrieval, and Mistral via Ollama for contextual Q&A; evaluation across 100 questions from 15 videos showed 30% better response relevance, 70–90% answer accuracy, and under 15-second latency on CPU-only infrastructure."
               ghLink="https://github.com/Kiran-velan/SmartScribe"
-              // demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
 
@@ -45,9 +45,17 @@ function Projects() {
               imgPath={api_rate}
               isBlog={false}
               title="API Rate Limiter"
-              description="I built a scalable API Rate Limiting Gateway using Spring Boot and Redis to control API abuse and manage fair usage. It supports both Fixed Window and Token Bucket algorithms, with Redis for fast request tracking. I also created a real-time Admin Dashboard to visualize usage metrics. The system is modular, logged, and designed to easily plug in new strategies or auth features in the future."
+              description="Built a configurable Redis-backed gateway to enforce per-user quotas across FREE and PRO plans. Implemented Fixed Window and Token Bucket algorithms behind a pluggable middleware architecture, with authentication and an admin dashboard for traffic analytics and request auditing. Stress tests reached 3,200+ requests/min with under 10 ms latency."
               ghLink="https://github.com/Kiran-velan/API-Rate-Limiter"
-              // demoLink="https://editor.soumya-jit.tech/"              
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="FinWise"
+              description="Built financial research APIs that combine Yahoo Finance market data, Google News RSS, and technical indicators (RSI, MACD, SMA-20) into a single research workflow. Added Groq-powered analysis and n8n automation to support stock research, portfolio insights, personal finance, and tax guidance."
+              ghLink="https://github.com/Kiran-velan/Finwise"
             />
           </Col>
         </Row>

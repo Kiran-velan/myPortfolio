@@ -8,34 +8,34 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Kiran </span>
-            from <span className="purple"> IIT Jodhpur.</span>
-            <br />
-            I am currently a final year Computer Science student passionate about backend development, API design, and system architecture. 
-            <br />
-            I enjoy working with Spring Boot and FastAPI, and I have a keen interest in distributed systems and microservices.
-            <br />
-            
-            <br/>
-            I love turning complex problems into elegant solutions and that is exactly why i love Data Structures and Algorithms.
-            <br />
-            Currently Exploring:
+            I'm a Computer Science graduate from
+            <span className="purple"> IIT Jodhpur (2026)</span> and a Software
+            Development Engineer with experience building backend services,
+            cloud-native workflows, and AI-enabled applications.
+            <br /><br />
+            At <span className="purple">Qure.ai</span>, I contributed to
+            multi-tenant notification infrastructure used by five products,
+            automated agent configuration releases across AWS environments,
+            built source-grounded knowledge retrieval workflows, and published
+            a reusable Python logging library for backend teams.
+            <br /><br />
+            I enjoy taking ambiguous engineering problems from system design
+            through implementation — especially where
+            <span className="purple"> reliability, scale, and useful AI</span>
+            intersect.
           </p>
+          <p>Areas I work across:</p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Cloud Computing
+              <ImPointRight /> Backend systems, APIs, and distributed workflows
             </li>
             <li className="about-activity">
-              <ImPointRight /> Artificial Intelligence
+              <ImPointRight /> Cloud infrastructure, deployment, and observability
             </li>
             <li className="about-activity">
-              <ImPointRight /> Autonomous Systems
+              <ImPointRight /> Applied AI, LLM applications, and retrieval systems
             </li>
           </ul>
-
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "I'm driven by curiosity and a love for systems that work reliably at scale. I learn best by building, breaking, and fixing real projects."{" "}
-          </p>
         </blockquote>
       </Card.Body>
     </Card>
