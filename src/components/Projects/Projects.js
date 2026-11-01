@@ -1,187 +1,341 @@
 
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { FiTrendingUp, FiTerminal } from "react-icons/fi";
+import { Container } from "react-bootstrap";
+import {
+  FiArrowUpRight,
+  FiTrendingUp,
+  FiTerminal,
+  FiUsers,
+  FiActivity,
+  FiFileText,
+} from "react-icons/fi";
+import { BsGithub } from "react-icons/bs";
 
-import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
 import api_rate from "../../Assets/Projects/api_rate.png";
 import swarm from "../../Assets/Projects/swarm.png";
 import smartscribe from "../../Assets/Projects/smartscribe.png";
+import finwise from "../../Assets/Projects/finwise.png";
+
+import "./Projects.css";
 
 const projects = [
   {
+    number: "01",
     title: "ConsensusWorks",
-    category: "COLLECTIVE INTELLIGENCE",
-    hook: "Can a group converge without simply taking a vote?",
+    category: "COLLABORATIVE SOFTWARE",
+    icon: <FiUsers />,
+    featured: true,
+    image: swarm,
     description:
-      "Most polling tools collect individual votes. ConsensusWorks models how preferences evolve across timed rounds, making group convergence visible as participants interact.",
+      "When people have different opinions, a simple vote doesn't always show where they agree. ConsensusWorks helps groups compare preferences, discuss options and see how decisions evolve over multiple rounds.",
+    built:
+      "A decision-making platform using the Bradley–Terry ranking model, with timed rounds, live updates, collaborative chat and reports.",
     engineering:
-      "A Bradley–Terry ranking engine with a Python intelligence microservice. Spring Boot, WebSockets, Redis and MySQL power live sessions and persistence.",
-    techStack: [
+      "Spring Boot, WebSockets, Redis and MySQL power the application, alongside a Python intelligence service.",
+    technologies: [
       "Java 21",
       "Spring Boot",
-      "WebSocket",
       "Python",
-      "Bradley–Terry",
-      "MySQL",
+      "WebSockets",
       "Redis",
-      "HTML5",
+      "MySQL",
+      "Bradley–Terry",
     ],
-    imgPath: swarm,
-    ghLink:
+    github:
       "https://github.com/Kiran-velan/ConsensusWorks-Collective_Decision_Making_Platform",
-    demoLink: "https://consensusworks-production.up.railway.app/",
-    evidenceLinks: [
+    demo:
+      "https://consensusworks-production.up.railway.app/",
+    evidence: [
       {
-        label: "Screenshots & Results",
+        label: "Project screenshots",
         url: "https://drive.google.com/drive/folders/12tlIK6qx-LE2EEtF-beuAYBnHJNR-p0QQKWvl7ez9S7121H1Xx6RoZ6xRPxghtiCHZvFUSab?usp=sharing",
-        type: "results",
       },
       {
-        label: "Project Presentation",
+        label: "Presentation",
         url: "https://canva.link/wlu4y3xm96dhte2",
-        type: "presentation",
       },
     ],
   },
   {
+    number: "02",
     title: "SmartScribe",
-    category: "RAG",
-    hook: "Find the answer buried inside hours of media.",
+    category: "APPLIED AI",
+    icon: <FiActivity />,
+    image: smartscribe,
     description:
-      "Long recordings are difficult to search. SmartScribe turns audio and video into a conversational knowledge source, allowing users to ask questions against the content.",
+      "Finding one important detail in a long recording shouldn't mean listening to everything again. SmartScribe lets users upload audio, video or YouTube content and ask questions about it.",
+    built:
+      "A media processing pipeline that transcribes recordings, finds relevant passages and uses them to generate context-aware answers.",
     engineering:
-      "Whisper transcription feeds a retrieval pipeline using Hugging Face embeddings and local LLMs. FastAPI serves the workflow, with React and Appwrite supporting the application.",
-    techStack: [
+      "Whisper, Hugging Face embeddings, retrieval, local LLMs, FastAPI, React and Appwrite.",
+    technologies: [
       "Python",
       "FastAPI",
       "Whisper",
       "Hugging Face",
       "RAG",
-      "Appwrite",
       "Ollama",
       "React",
+      "Appwrite",
     ],
-    imgPath: smartscribe,
-    ghLink: "https://github.com/Kiran-velan/SmartScribe",
-    evidenceLinks: [
+    github: "https://github.com/Kiran-velan/SmartScribe",
+    evidence: [
       {
-        label: "Screenshots & Outputs",
+        label: "Screenshots & outputs",
         url: "https://drive.google.com/drive/folders/1MSwavedTS-Gg4YRsN_bDX2OAhc3P_JZE?usp=sharing",
-        type: "results",
       },
     ],
   },
   {
+    number: "03",
     title: "API Rate Limiter",
-    category: "DISTRIBUTED SYSTEMS",
-    hook: "How do you enforce fair API usage under load?",
+    category: "BACKEND ENGINEERING",
+    icon: <FiActivity />,
+    image: api_rate,
     description:
-      "A configurable API gateway applies per-user request policies instead of allowing one client to consume the available capacity.",
+      "One client sending too many requests shouldn't affect everyone else. This project controls how frequently users can access an API through configurable rate limits.",
+    built:
+      "Implemented Fixed Window and Token Bucket algorithms, Redis-backed request tracking, configurable user plans and a live analytics dashboard.",
     engineering:
-      "Fixed Window and Token Bucket strategies with Redis-backed request tracking, configurable user plans and a real-time analytics dashboard.",
-    techStack: [
+      "Java, Spring Boot and Redis.",
+    technologies: [
       "Java",
       "Spring Boot",
       "Redis",
       "Fixed Window",
       "Token Bucket",
     ],
-    imgPath: api_rate,
-    ghLink: "https://github.com/Kiran-velan/API-Rate-Limiter",
-    evidenceLinks: [
+    github: "https://github.com/Kiran-velan/API-Rate-Limiter",
+    evidence: [
       {
-        label: "Screenshots & Test Results",
+        label: "Screenshots & test results",
         url: "https://drive.google.com/drive/folders/1cc72ql3iVOV2AsKf_7V--314FwQYaEel?usp=sharing",
-        type: "results",
       },
     ],
   },
   {
+    number: "04",
     title: "FinWise",
-    category: "FINANCIAL RESEARCH",
-    hook: "Turn fragmented market signals into a research workflow.",
+    category: "AI & FINANCIAL RESEARCH",
+    icon: <FiTrendingUp />,
+    image: finwise,
     description:
-      "Market prices, news, technical indicators and portfolio context are scattered across sources. FinWise brings them into one AI-assisted financial research experience.",
+      "Stock research often means jumping between market prices, news and technical indicators. FinWise brings these sources together in one AI-assisted research application.",
+    built:
+      "Combines market data, financial news, RSI, MACD and SMA-20 indicators with AI-generated analysis.",
     engineering:
-      "Combines Yahoo Finance and Google News RSS with RSI, MACD and SMA-20 indicators, Groq-powered analysis, FastAPI services and n8n workflows.",
-    techStack: [
+      "Yahoo Finance, Google News RSS, Groq, FastAPI and n8n workflows.",
+    technologies: [
       "Python",
       "FastAPI",
       "Groq",
       "Yahoo Finance",
+      "Technical Indicators",
       "n8n",
     ],
-    coverClass: "project-cover-finwise",
-    coverIcon: <FiTrendingUp />,
-    ghLink: "https://github.com/Kiran-velan/Finwise",
-    evidenceLinks: [
+    github: "https://github.com/Kiran-velan/Finwise",
+    evidence: [
       {
-        label: "Screenshots & Results",
+        label: "Screenshots & results",
         url: "https://drive.google.com/file/d/1t0s4hEltB1k3jScX3NpCtqgdV2NFJ-HK/view?usp=sharing",
-        type: "results",
       },
     ],
   },
   {
+    number: "05",
     title: "CLI Coding Support Agent",
-    category: "DEVELOPER TOOLS",
-    hook: "Give an LLM tools — with guardrails.",
+    category: "AI DEVELOPER TOOLS",
+    icon: <FiTerminal />,
+    cover: true,
     description:
-      "A terminal coding assistant that can inspect and modify a project instead of stopping at generated suggestions.",
+      "An AI coding assistant that can do more than suggest code. It works directly with project files, helping developers inspect and modify their codebase from the terminal.",
+    built:
+      "Supports reading, creating, editing and writing files through an iterative tool-calling workflow. Shell commands require explicit user approval.",
     engineering:
-      "LiteLLM and Gemini select filesystem tools in an iterative, bounded execution loop. Shell commands require explicit user approval.",
-    techStack: [
+      "Python, LiteLLM and Gemini.",
+    technologies: [
       "Python",
       "LiteLLM",
       "Gemini",
       "Tool Calling",
+      "Filesystem Operations",
       "CLI",
     ],
-    coverClass: "project-cover-cli",
-    coverIcon: <FiTerminal />,
-    ghLink: "https://github.com/Kiran-velan/my-cli-coding-support-agent",
-    evidenceLinks: [
+    github:
+      "https://github.com/Kiran-velan/my-cli-coding-support-agent",
+    evidence: [
       {
-        label: "Execution Examples",
+        label: "Execution examples",
         url: "https://drive.google.com/drive/folders/1_yRue2DimYMM05OSgHNcBWTCShJ2F4ew?usp=sharing",
-        type: "results",
       },
     ],
   },
 ];
 
-function Projects() {
+function ProjectLinks({ project }) {
   return (
-    <Container fluid className="project-section">
-      <Particle />
+    <div className="work-links">
+      <a
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="work-link work-link-primary"
+      >
+        <BsGithub />
+        Source Code
+        <FiArrowUpRight />
+      </a>
 
-      <Container>
-        <div className="project-intro">
-          <span className="project-overline">
-            MY ENGINEERING WORKS
-          </span>
+      {project.demo && (
+        <a
+          href={project.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="work-link work-link-secondary"
+        >
+          Live Demo
+          <FiArrowUpRight />
+        </a>
+      )}
+    </div>
+  );
+}
 
-          <h1 className="project-heading">
-            Building things that <strong className="purple">solve problems.</strong>
-          </h1>
+function ProjectCard({ project }) {
+  return (
+    <article className="work-card">
+      <div className="work-card-image">
+        {project.cover ? (
+          <div className="work-cover">
+            <div className="work-cover-icon">
+              {project.icon}
+            </div>
+            <span>BUILT FOR THE TERMINAL</span>
+            <strong>AI Coding Agent</strong>
+          </div>
+        ) : (
+          <img src={project.image} alt={`${project.title} preview`} />
+        )}
 
-          <p className="project-subtitle">
-            From backend infrastructure to Full Stack Development to applied AI — a closer look
-            at the problems, engineering decisions and systems behind
-            my projects.
-          </p>
+        <span className="work-number">{project.number}</span>
+      </div>
+
+      <div className="work-card-content">
+        <div className="work-category">
+          {project.category}
         </div>
 
-        <Row className="project-grid">
-          {projects.map((project) => (
-            <Col className="project-card" key={project.title}>
-              <ProjectCard {...project} />
-            </Col>
+        <h2>{project.title}</h2>
+
+        <p className="work-description">
+          {project.description}
+        </p>
+
+        <div className="work-detail">
+          <span>WHAT I BUILT</span>
+          <p>{project.built}</p>
+        </div>
+
+        <div className="work-detail work-engineering">
+          <span>UNDER THE HOOD</span>
+          <p>{project.engineering}</p>
+        </div>
+
+        <div className="work-tags">
+          {project.technologies.map((tech) => (
+            <span key={tech}>{tech}</span>
           ))}
-        </Row>
+        </div>
+
+        {project.evidence?.length > 0 && (
+          <div className="work-evidence">
+            {project.evidence.map((item) => (
+              <a
+                key={item.url}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiFileText />
+                {item.label}
+                <FiArrowUpRight />
+              </a>
+            ))}
+          </div>
+        )}
+
+        <ProjectLinks project={project} />
+      </div>
+    </article>
+  );
+}
+
+function Projects() {
+  const featured = projects.find((project) => project.featured);
+  const remaining = projects.filter((project) => !project.featured);
+
+  return (
+    <Container fluid className="project-section work-page">
+      <Particle />
+
+      <Container className="work-container">
+        <header className="work-hero">
+          <span className="work-overline">
+            <span className="work-overline-dot" />
+            SELECTED WORK
+          </span>
+
+          <h1>
+            Ideas are easy.
+            <br />
+            <span>Building them is the interesting part.</span>
+          </h1>
+
+          <p>
+            A collection of things I've built to solve practical problems.
+            From backend systems to AI-powered applications, each project
+            represents an idea taken beyond the drawing board.
+          </p>
+
+          <div className="work-meta">
+            <span>05 PROJECTS</span>
+            <span className="work-meta-divider" />
+            <span>BACKEND · FULL STACK · APPLIED AI</span>
+          </div>
+        </header>
+
+        {featured && (
+          <section className="featured-section">
+            <div className="section-heading">
+              <span>01 / FEATURED PROJECT</span>
+              <span>TAKE A CLOSER LOOK</span>
+            </div>
+
+            <ProjectCard project={featured} />
+          </section>
+        )}
+
+        <section className="other-projects">
+          <div className="section-heading">
+            <span>MORE PROJECTS</span>
+            <span>BUILT WITH PURPOSE</span>
+          </div>
+
+          <div className="work-grid">
+            {remaining.map((project) => (
+              <ProjectCard key={project.number} project={project} />
+            ))}
+          </div>
+        </section>
+
+        <footer className="work-footer">
+          <p>
+            Good software starts with understanding the problem.
+            That's what I try to bring to every project.
+          </p>
+        </footer>
       </Container>
     </Container>
   );
