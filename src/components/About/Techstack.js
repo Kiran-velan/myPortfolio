@@ -14,7 +14,6 @@ import {
   DiDocker,
   DiMysql,
   DiRedis,
-  DiAws,
 } from "react-icons/di";
 
 import {
@@ -22,19 +21,13 @@ import {
   SiFastapi,
   SiThymeleaf,
   SiPostgresql,
-  SiAppwrite,
-  SiOpenai,
   SiGithub,
   SiPostman,
   SiVisualstudiocode,
   SiIntellijidea,
 } from "react-icons/si";
 
-import {
-  FaBrain,
-  FaRobot,
-  FaLink,
-} from "react-icons/fa";
+import { SiAmazonaws } from "react-icons/si";
 
 function Techstack() {
   return (
@@ -56,20 +49,13 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons"><SiFastapi /></Col>
       <Col xs={4} md={2} className="tech-icons"><DiNodejs /></Col>
 
-      {/* AI & LLM */}
-      <Col xs={4} md={2} className="tech-icons"><SiOpenai /></Col>
-      <Col xs={4} md={2} className="tech-icons"><FaBrain /></Col>
-      <Col xs={4} md={2} className="tech-icons"><FaRobot /></Col>
-      <Col xs={4} md={2} className="tech-icons"><FaLink /></Col>
-
       {/* Databases & Storage */}
       <Col xs={4} md={2} className="tech-icons"><DiMysql /></Col>
       <Col xs={4} md={2} className="tech-icons"><SiPostgresql /></Col>
       <Col xs={4} md={2} className="tech-icons"><DiRedis /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiAppwrite /></Col>
 
       {/* Cloud & DevOps */}
-      <Col xs={4} md={2} className="tech-icons"><DiAws /></Col>
+      <Col xs={4} md={2} className="tech-icons"><SiAmazonaws /></Col>
       <Col xs={4} md={2} className="tech-icons"><DiDocker /></Col>
       <Col xs={4} md={2} className="tech-icons"><DiGit /></Col>
       <Col xs={4} md={2} className="tech-icons"><SiGithub /></Col>

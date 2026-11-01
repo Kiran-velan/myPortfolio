@@ -1,55 +1,34 @@
 
 import React from "react";
 import { Container } from "react-bootstrap";
-import {
-  FiArrowUpRight,
-  FiTrendingUp,
-  FiTerminal,
-  FiUsers,
-  FiActivity,
-  FiFileText,
-} from "react-icons/fi";
-import { BsGithub } from "react-icons/bs";
-
-import Particle from "../Particle";
 
 import api_rate from "../../Assets/Projects/api_rate.png";
 import swarm from "../../Assets/Projects/swarm.png";
 import smartscribe from "../../Assets/Projects/smartscribe.png";
 import finwise from "../../Assets/Projects/finwise.png";
+import cli_agent from "../../Assets/Projects/cli_agent.png";
 
 import "./Projects.css";
 
 const projects = [
   {
-    number: "01",
     title: "ConsensusWorks",
-    category: "COLLABORATIVE SOFTWARE",
-    icon: <FiUsers />,
-    featured: true,
     image: swarm,
-    description:
-      "When people have different opinions, a simple vote doesn't always show where they agree. ConsensusWorks helps groups compare preferences, discuss options and see how decisions evolve over multiple rounds.",
-    built:
-      "A decision-making platform using the Bradley–Terry ranking model, with timed rounds, live updates, collaborative chat and reports.",
+    problem:
+      "Simple voting doesn't always capture how strongly people feel about different options or where a group actually agrees. Reaching a decision becomes difficult when preferences differ.",
+    solution:
+      "Built a collaborative decision-making platform using the Bradley–Terry ranking model, allowing participants to compare preferences and reach decisions across multiple rounds.",
     engineering:
-      "Spring Boot, WebSockets, Redis and MySQL power the application, alongside a Python intelligence service.",
-    technologies: [
-      "Java 21",
-      "Spring Boot",
-      "Python",
-      "WebSockets",
-      "Redis",
-      "MySQL",
-      "Bradley–Terry",
-    ],
+      "Implemented timed rounds, real-time updates, collaborative chat and report generation. Spring Boot handles the backend, WebSockets enable live communication, Redis supports application operations, and a Python service handles decision intelligence.",
+    technologies:
+      "Java 21, Spring Boot, Python, WebSockets, Redis, MySQL",
     github:
       "https://github.com/Kiran-velan/ConsensusWorks-Collective_Decision_Making_Platform",
     demo:
       "https://consensusworks-production.up.railway.app/",
     evidence: [
       {
-        label: "Project screenshots",
+        label: "Screenshots",
         url: "https://drive.google.com/drive/folders/12tlIK6qx-LE2EEtF-beuAYBnHJNR-p0QQKWvl7ez9S7121H1Xx6RoZ6xRPxghtiCHZvFUSab?usp=sharing",
       },
       {
@@ -59,27 +38,16 @@ const projects = [
     ],
   },
   {
-    number: "02",
     title: "SmartScribe",
-    category: "APPLIED AI",
-    icon: <FiActivity />,
     image: smartscribe,
-    description:
-      "Finding one important detail in a long recording shouldn't mean listening to everything again. SmartScribe lets users upload audio, video or YouTube content and ask questions about it.",
-    built:
-      "A media processing pipeline that transcribes recordings, finds relevant passages and uses them to generate context-aware answers.",
+    problem:
+      "Finding a specific piece of information in a lengthy audio or video recording often means going through the entire recording again. Traditional transcription alone doesn't make that information easy to retrieve.",
+    solution:
+      "Built a media understanding platform that converts audio, video and YouTube content into searchable knowledge, allowing users to ask questions about their recordings.",
     engineering:
-      "Whisper, Hugging Face embeddings, retrieval, local LLMs, FastAPI, React and Appwrite.",
-    technologies: [
-      "Python",
-      "FastAPI",
-      "Whisper",
-      "Hugging Face",
-      "RAG",
-      "Ollama",
-      "React",
-      "Appwrite",
-    ],
+      "Developed a media processing pipeline covering transcription, embedding generation, retrieval and context-aware answer generation using Whisper, Hugging Face, RAG and local LLMs. FastAPI handles backend services, with React and Appwrite supporting the application.",
+    technologies:
+      "Python, FastAPI, Whisper, Hugging Face, RAG, Ollama, React, Appwrite",
     github: "https://github.com/Kiran-velan/SmartScribe",
     evidence: [
       {
@@ -89,24 +57,16 @@ const projects = [
     ],
   },
   {
-    number: "03",
     title: "API Rate Limiter",
-    category: "BACKEND ENGINEERING",
-    icon: <FiActivity />,
     image: api_rate,
-    description:
-      "One client sending too many requests shouldn't affect everyone else. This project controls how frequently users can access an API through configurable rate limits.",
-    built:
-      "Implemented Fixed Window and Token Bucket algorithms, Redis-backed request tracking, configurable user plans and a live analytics dashboard.",
+    problem:
+      "Uncontrolled requests from a single client can consume shared resources and affect the availability of an API for other users. Different subscription plans also require different request limits.",
+    solution:
+      "Built a subscription-based API rate limiter that controls request traffic using configurable limits for different users.",
     engineering:
-      "Java, Spring Boot and Redis.",
-    technologies: [
-      "Java",
-      "Spring Boot",
-      "Redis",
-      "Fixed Window",
-      "Token Bucket",
-    ],
+      "Implemented Fixed Window and Token Bucket algorithms, Redis-backed request tracking, configurable user plans and a live analytics dashboard using Java and Spring Boot.",
+    technologies:
+      "Java, Spring Boot, Redis, Fixed Window, Token Bucket",
     github: "https://github.com/Kiran-velan/API-Rate-Limiter",
     evidence: [
       {
@@ -116,25 +76,16 @@ const projects = [
     ],
   },
   {
-    number: "04",
     title: "FinWise",
-    category: "AI & FINANCIAL RESEARCH",
-    icon: <FiTrendingUp />,
     image: finwise,
-    description:
-      "Stock research often means jumping between market prices, news and technical indicators. FinWise brings these sources together in one AI-assisted research application.",
-    built:
-      "Combines market data, financial news, RSI, MACD and SMA-20 indicators with AI-generated analysis.",
+    problem:
+      "Financial research often requires switching between market prices, financial news and technical indicators. Bringing these sources together to understand a stock can be time-consuming.",
+    solution:
+      "Built an AI-assisted financial research application that combines market data, financial news and technical analysis in one place.",
     engineering:
-      "Yahoo Finance, Google News RSS, Groq, FastAPI and n8n workflows.",
-    technologies: [
-      "Python",
-      "FastAPI",
-      "Groq",
-      "Yahoo Finance",
-      "Technical Indicators",
-      "n8n",
-    ],
+      "Integrated Yahoo Finance and Google News RSS for market information, calculated RSI, MACD and SMA-20 indicators, and incorporated AI-generated analysis using Groq, FastAPI and n8n workflows.",
+    technologies:
+      "Python, FastAPI, Groq, Yahoo Finance, Technical Indicators, n8n",
     github: "https://github.com/Kiran-velan/Finwise",
     evidence: [
       {
@@ -144,25 +95,16 @@ const projects = [
     ],
   },
   {
-    number: "05",
     title: "CLI Coding Support Agent",
-    category: "AI DEVELOPER TOOLS",
-    icon: <FiTerminal />,
-    cover: true,
-    description:
-      "An AI coding assistant that can do more than suggest code. It works directly with project files, helping developers inspect and modify their codebase from the terminal.",
-    built:
-      "Supports reading, creating, editing and writing files through an iterative tool-calling workflow. Shell commands require explicit user approval.",
+    image: cli_agent,
+    problem:
+      "Developers frequently need to inspect, create and modify multiple project files while working in the terminal. Repeating these operations manually interrupts the development workflow.",
+    solution:
+      "Built a terminal-based AI coding assistant that can interact with project files and help developers work directly with their codebase.",
     engineering:
-      "Python, LiteLLM and Gemini.",
-    technologies: [
-      "Python",
-      "LiteLLM",
-      "Gemini",
-      "Tool Calling",
-      "Filesystem Operations",
-      "CLI",
-    ],
+      "Implemented file reading, creation, editing and writing through an iterative tool-calling workflow using Python, LiteLLM and Gemini. Shell commands require explicit user approval.",
+    technologies:
+      "Python, LiteLLM, Gemini, Tool Calling, Filesystem Operations, CLI",
     github:
       "https://github.com/Kiran-velan/my-cli-coding-support-agent",
     evidence: [
@@ -175,30 +117,34 @@ const projects = [
 ];
 
 function ProjectLinks({ project }) {
+  const links = [
+    {
+      label: "GitHub",
+      url: project.github,
+    },
+    ...(project.demo
+      ? [{ label: "Live Demo", url: project.demo }]
+      : []),
+    ...project.evidence.map((item) => ({
+      label: item.label,
+      url: item.url,
+    })),
+  ];
+
   return (
     <div className="work-links">
-      <a
-        href={project.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="work-link work-link-primary"
-      >
-        <BsGithub />
-        Source Code
-        <FiArrowUpRight />
-      </a>
-
-      {project.demo && (
+      {links.map((link) => (
         <a
-          href={project.demo}
+          key={link.url}
+          href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="work-link work-link-secondary"
+          className="work-link"
         >
-          Live Demo
-          <FiArrowUpRight />
+          {link.label}
+          <span aria-hidden="true">↗</span>
         </a>
-      )}
+      ))}
     </div>
   );
 }
@@ -207,64 +153,34 @@ function ProjectCard({ project }) {
   return (
     <article className="work-card">
       <div className="work-card-image">
-        {project.cover ? (
-          <div className="work-cover">
-            <div className="work-cover-icon">
-              {project.icon}
-            </div>
-            <span>BUILT FOR THE TERMINAL</span>
-            <strong>AI Coding Agent</strong>
-          </div>
-        ) : (
-          <img src={project.image} alt={`${project.title} preview`} />
-        )}
-
-        <span className="work-number">{project.number}</span>
+        <img
+          src={project.image}
+          alt={`${project.title} application screenshot`}
+          loading="lazy"
+        />
       </div>
 
       <div className="work-card-content">
-        <div className="work-category">
-          {project.category}
-        </div>
-
         <h2>{project.title}</h2>
 
-        <p className="work-description">
-          {project.description}
-        </p>
-
         <div className="work-detail">
-          <span>WHAT I BUILT</span>
-          <p>{project.built}</p>
+          <h3>The Problem</h3>
+          <p>{project.problem}</p>
         </div>
 
-        <div className="work-detail work-engineering">
-          <span>UNDER THE HOOD</span>
+        <div className="work-detail">
+          <h3>My Approach</h3>
+          <p>{project.solution}</p>
+        </div>
+
+        <div className="work-detail">
+          <h3>Engineering</h3>
           <p>{project.engineering}</p>
         </div>
 
-        <div className="work-tags">
-          {project.technologies.map((tech) => (
-            <span key={tech}>{tech}</span>
-          ))}
+        <div className="work-technologies">
+          {project.technologies}
         </div>
-
-        {project.evidence?.length > 0 && (
-          <div className="work-evidence">
-            {project.evidence.map((item) => (
-              <a
-                key={item.url}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiFileText />
-                {item.label}
-                <FiArrowUpRight />
-              </a>
-            ))}
-          </div>
-        )}
 
         <ProjectLinks project={project} />
       </div>
@@ -273,69 +189,23 @@ function ProjectCard({ project }) {
 }
 
 function Projects() {
-  const featured = projects.find((project) => project.featured);
-  const remaining = projects.filter((project) => !project.featured);
-
   return (
     <Container fluid className="project-section work-page">
-      <Particle />
-
       <Container className="work-container">
         <header className="work-hero">
-          <span className="work-overline">
-            <span className="work-overline-dot" />
-            SELECTED WORK
-          </span>
-
-          <h1>
-            Ideas are easy.
-            <br />
-            <span>Building them is the interesting part.</span>
-          </h1>
-
+          <h1>Projects</h1>
           <p>
-            A collection of things I've built to solve practical problems.
-            From backend systems to AI-powered applications, each project
-            represents an idea taken beyond the drawing board.
+            A collection of problems I've worked on and systems I've built.
+            Each project reflects my approach to solving practical challenges
+            through software engineering.
           </p>
-
-          <div className="work-meta">
-            <span>05 PROJECTS</span>
-            <span className="work-meta-divider" />
-            <span>BACKEND · FULL STACK · APPLIED AI</span>
-          </div>
         </header>
 
-        {featured && (
-          <section className="featured-section">
-            <div className="section-heading">
-              <span>01 / FEATURED PROJECT</span>
-              <span>TAKE A CLOSER LOOK</span>
-            </div>
-
-            <ProjectCard project={featured} />
-          </section>
-        )}
-
-        <section className="other-projects">
-          <div className="section-heading">
-            <span>MORE PROJECTS</span>
-            <span>BUILT WITH PURPOSE</span>
-          </div>
-
-          <div className="work-grid">
-            {remaining.map((project) => (
-              <ProjectCard key={project.number} project={project} />
-            ))}
-          </div>
-        </section>
-
-        <footer className="work-footer">
-          <p>
-            Good software starts with understanding the problem.
-            That's what I try to bring to every project.
-          </p>
-        </footer>
+        <div className="work-list">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
       </Container>
     </Container>
   );
